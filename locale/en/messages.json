@@ -5826,11 +5826,17 @@
     "oholdInvertedPitchTrimHelp": {
         "message": "Pitch trim on the INVERTED hold target, positive = nose above the horizon. Inverted flight typically needs a few degrees to hold altitude (down-elevator bias)."
     },
-    "oholdKnifePitchTrim": {
-        "message": "Knife edge pitch trim"
+    "oholdKnifeLeftPitchTrim": {
+        "message": "Knife edge left pitch trim"
     },
-    "oholdKnifePitchTrimHelp": {
-        "message": "Pitch trim on the KNIFE EDGE hold targets (both sides), positive = nose above the horizon, held via the rudder."
+    "oholdKnifeLeftPitchTrimHelp": {
+        "message": "Pitch trim on the KNIFE EDGE LEFT hold target, positive = nose above the horizon, held via the rudder. The sides differ: the body-fixed prop effects (spiral slipstream, torque, P-factor) point to the vertically opposite direction after the 180 deg roll to the other side. Reversed prop rotation swaps the sides."
+    },
+    "oholdKnifeRightPitchTrim": {
+        "message": "Knife edge right pitch trim"
+    },
+    "oholdKnifeRightPitchTrimHelp": {
+        "message": "Pitch trim on the KNIFE EDGE RIGHT hold target, positive = nose above the horizon, held via the rudder. Trim each side in flight; see the left trim for why the sides differ."
     },
     "blackboxFields": {
         "message": "Blackbox fields"
