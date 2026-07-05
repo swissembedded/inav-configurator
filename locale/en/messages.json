@@ -5817,6 +5817,21 @@
     "altFloorClimbPitchHelp": {
         "message": "Nose up pitch target flown during the altitude floor recovery."
     },
+    "orientationHoldConfiguration": {
+        "message": "Orientation Hold"
+    },
+    "oholdInvertedPitchTrim": {
+        "message": "Inverted pitch trim"
+    },
+    "oholdInvertedPitchTrimHelp": {
+        "message": "Pitch trim on the INVERTED hold target, positive = nose above the horizon. Inverted flight typically needs a few degrees to hold altitude (down-elevator bias)."
+    },
+    "oholdKnifePitchTrim": {
+        "message": "Knife edge pitch trim"
+    },
+    "oholdKnifePitchTrimHelp": {
+        "message": "Pitch trim on the KNIFE EDGE hold targets (both sides), positive = nose above the horizon, held via the rudder."
+    },
     "blackboxFields": {
         "message": "Blackbox fields"
     },
