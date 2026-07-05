@@ -118,6 +118,29 @@
 
                 <div class="config-section gui_box grey">
                     <div class="gui_box_titlebar">
+                        <div class="spacer_box_title" data-i18n="altitudeFloorConfiguration"></div>
+                    </div>
+                    <div class="spacer_box">
+                        <div class="number">
+                            <input id="altFloorAltitude" type="number" data-unit="m" data-setting="alt_floor_altitude" data-setting-multiplier="1" step="1" min="5" max="500" />
+                            <label for="altFloorAltitude"><span data-i18n="altFloorAltitude"></span></label>
+                            <div for="altFloorAltitude" class="helpicon cf_tip" data-i18n_title="altFloorAltitudeHelp"></div>
+                        </div>
+                        <div class="number">
+                            <input id="altFloorMargin" type="number" data-unit="m" data-setting="alt_floor_margin" data-setting-multiplier="1" step="1" min="2" max="100" />
+                            <label for="altFloorMargin"><span data-i18n="altFloorMargin"></span></label>
+                            <div for="altFloorMargin" class="helpicon cf_tip" data-i18n_title="altFloorMarginHelp"></div>
+                        </div>
+                        <div class="number">
+                            <input id="altFloorClimbPitch" type="number" data-unit="deg" data-setting="alt_floor_climb_pitch" data-setting-multiplier="1" step="1" min="5" max="45" />
+                            <label for="altFloorClimbPitch"><span data-i18n="altFloorClimbPitch"></span></label>
+                            <div for="altFloorClimbPitch" class="helpicon cf_tip" data-i18n_title="altFloorClimbPitchHelp"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="config-section gui_box grey">
+                    <div class="gui_box_titlebar">
                         <div class="spacer_box_title" data-i18n="powerConfiguration"></div>
                     </div>
                     <div class="spacer_box">

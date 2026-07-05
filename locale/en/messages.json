@@ -5784,6 +5784,39 @@
     "mixer_control_profile_linking_hint": {
         "message": "mixer_control_profile_linking: Enable on both Mixer Profile if you want Control Profile switching handled by Mixer Profile switching(Recommend in vtol/mixed plaform type setup)"
     },
+    "tvcGain": {
+        "message": "Thrust vectoring gain [%]"
+    },
+    "tvcGain_hint": {
+        "message": "Overall deflection gain at full thrust for the TVC Roll/Pitch/Yaw servo mixer input sources. Map thrust vectoring servos to the TVC inputs instead of the Stabilized inputs."
+    },
+    "tvcThrustComp": {
+        "message": "TVC thrust compensation [%]"
+    },
+    "tvcThrustComp_hint": {
+        "message": "Vectoring vane / tilt motor authority scales with thrust. 100 compensates fully (deflection ~ 1/thrust, capped at low thrust) so control response stays constant across the throttle range; 0 disables the compensation."
+    },
+    "altitudeFloorConfiguration": {
+        "message": "Altitude Floor"
+    },
+    "altFloorAltitude": {
+        "message": "Floor altitude"
+    },
+    "altFloorAltitudeHelp": {
+        "message": "Minimum altitude above home for the ALT FLOOR mode. With the mode active and armed (climbed above floor + margin once), a predicted floor breach engages an automatic upright + climb recovery. Switch the mode off to land."
+    },
+    "altFloorMargin": {
+        "message": "Floor margin"
+    },
+    "altFloorMarginHelp": {
+        "message": "Margin above the floor to arm the protection after takeoff and to release the recovery."
+    },
+    "altFloorClimbPitch": {
+        "message": "Recovery climb pitch"
+    },
+    "altFloorClimbPitchHelp": {
+        "message": "Nose up pitch target flown during the altitude floor recovery."
+    },
     "blackboxFields": {
         "message": "Blackbox fields"
     },
