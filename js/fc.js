@@ -36,6 +36,7 @@ var FC = {
     ADJUSTMENT_RANGES: null,
     SERVO_CONFIG: null,
     SERVO_RULES: null,
+    FIGURE_SEQUENCE: null,
     MOTOR_RULES: null,
     LOGIC_CONDITIONS: null,
     LOGIC_CONDITIONS_STATUS: null,

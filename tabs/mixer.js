@@ -39,6 +39,7 @@ mixerTab.initialize = function (callback, scrollPosition) {
         mspHelper.loadMixerConfig,
         mspHelper.loadMotors,
         mspHelper.loadServoMixRules,
+        mspHelper.loadFigureSequence,
         mspHelper.loadMotorMixRules,
         mspHelper.loadOutputMappingExt,
         mspHelper.loadTimerOutputModes,
@@ -51,6 +52,7 @@ mixerTab.initialize = function (callback, scrollPosition) {
     saveChainer.setChain([
         mspHelper.saveMixerConfig,
         mspHelper.sendServoMixer,
+        mspHelper.sendFigureSequence,
         mspHelper.sendMotorMixer,
         mspHelper.sendTimerOutputModes,
         saveSettings,
@@ -329,6 +331,44 @@ mixerTab.initialize = function (callback, scrollPosition) {
         });
 
         return servoInputs;
+    }
+
+    function renderFigureSequence() {
+        const SEGMENT_TYPES = ['END', 'ROLL', 'PITCH', 'HOLD', 'WAIT ALT', 'WAIT TIME'];
+        const $rows = $('#figure-sequence-rows');
+        $rows.find('*').remove();
+        if (!FC.FIGURE_SEQUENCE) {
+            return;
+        }
+        FC.FIGURE_SEQUENCE.forEach(function (seg, index) {
+            const $row = $('<tr>');
+            $row.append($('<td>').text(index));
+
+            const $type = $('<select>');
+            SEGMENT_TYPES.forEach(function (name, value) {
+                $type.append($('<option>').attr('value', value).text(name));
+            });
+            $type.val(seg.type).on('change', function () {
+                seg.type = parseInt($(this).val(), 10);
+            });
+            $row.append($('<td>').append($type));
+
+            ['p1', 'p2', 'p3'].forEach(function (field) {
+                const $num = $('<input type="number" step="1" min="-32768" max="32767">').val(seg[field]);
+                $num.on('change', function () {
+                    seg[field] = parseInt($(this).val(), 10) || 0;
+                });
+                $row.append($('<td>').append($num));
+            });
+
+            const $assist = $('<input type="checkbox">').prop('checked', !!(seg.flags & 1));
+            $assist.on('change', function () {
+                seg.flags = $(this).is(':checked') ? (seg.flags | 1) : (seg.flags & ~1);
+            });
+            $row.append($('<td>').append($assist));
+
+            $rows.append($row);
+        });
     }
 
     function renderServoMixRules() {
@@ -1048,6 +1088,7 @@ mixerTab.initialize = function (callback, scrollPosition) {
         $('#save-button').on('click', saveAndReboot);
 
         renderServoMixRules();
+        renderFigureSequence();
         renderMotorMixRules();
 
         renderOutputTable();

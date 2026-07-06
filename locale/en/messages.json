@@ -5796,6 +5796,27 @@
     "tvcThrustComp_hint": {
         "message": "Vectoring vane / tilt motor authority scales with thrust. 100 compensates fully (deflection ~ 1/thrust, capped at low thrust) so control response stays constant across the throttle range; 0 disables the compensation."
     },
+    "figureSequenceEditor": {
+        "message": "Figure Sequence (FIGURE SEQ mode)"
+    },
+    "figureSequenceEditorHelp": {
+        "message": "Segment chain flown by the FIGURE SEQ mode, in order until the first END. ROLL/PITCH: p1 = signed degrees, cumulative on the running attitude (Immelmann = PITCH 180 then ROLL 180). HOLD: p1 = roll, p2 = pitch [deg], p3 = duration [ms]. WAIT ALT: p1 = altitude [m above home], p2 = tolerance [m] - gates the chain until reached. WAIT TIME: p3 = duration [ms]. Assist = altitude assist during the segment. Saved with the tab's Save button."
+    },
+    "figureSeqType": {
+        "message": "Segment"
+    },
+    "figureSeqP1": {
+        "message": "p1 (deg / alt m)"
+    },
+    "figureSeqP2": {
+        "message": "p2 (deg / tol m)"
+    },
+    "figureSeqP3": {
+        "message": "p3 (ms)"
+    },
+    "figureSeqAssist": {
+        "message": "Altitude assist"
+    },
     "altitudeFloorConfiguration": {
         "message": "Altitude Floor"
     },

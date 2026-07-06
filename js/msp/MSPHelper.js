@@ -460,6 +460,23 @@ var mspHelper = (function () {
             case MSPCodes.MSP2_INAV_SET_SERVO_MIXER:
                 console.log("Servo mix saved");
                 break;
+            case MSPCodes.MSP2_INAV_FIGURE_SEQUENCE:
+                FC.FIGURE_SEQUENCE = [];
+                if (data.byteLength % 8 === 0) {
+                    for (let i = 0; i < data.byteLength; i += 8) {
+                        FC.FIGURE_SEQUENCE.push({
+                            type: data.getUint8(i),
+                            p1: data.getInt16(i + 1, true),
+                            p2: data.getInt16(i + 3, true),
+                            p3: data.getInt16(i + 5, true),
+                            flags: data.getUint8(i + 7)
+                        });
+                    }
+                }
+                break;
+            case MSPCodes.MSP2_INAV_SET_FIGURE_SEQUENCE:
+                console.log("Figure sequence segment saved");
+                break;
             case MSPCodes.MSP2_INAV_LOGIC_CONDITIONS:
                 FC.LOGIC_CONDITIONS.flush();
                 if (data.byteLength % 14 === 0) {
@@ -3524,6 +3541,38 @@ var mspHelper = (function () {
 
     self.loadServoMixRules = function (callback) {
         MSP.send_message(MSPCodes.MSP2_INAV_SERVO_MIXER, false, false, callback);
+    };
+
+    self.loadFigureSequence = function (callback) {
+        MSP.send_message(MSPCodes.MSP2_INAV_FIGURE_SEQUENCE, false, false, callback);
+    };
+
+    self.sendFigureSequence = function (onCompleteCallback) {
+        let segIndex = 0;
+
+        function sendSegment() {
+            const seg = FC.FIGURE_SEQUENCE[segIndex];
+            const buffer = [];
+            buffer.push(segIndex);
+            buffer.push(seg.type);
+            buffer.push(BitHelper.lowByte(seg.p1));
+            buffer.push(BitHelper.highByte(seg.p1));
+            buffer.push(BitHelper.lowByte(seg.p2));
+            buffer.push(BitHelper.highByte(seg.p2));
+            buffer.push(BitHelper.lowByte(seg.p3));
+            buffer.push(BitHelper.highByte(seg.p3));
+            buffer.push(seg.flags);
+
+            segIndex++;
+            const next = (segIndex >= FC.FIGURE_SEQUENCE.length) ? onCompleteCallback : sendSegment;
+            MSP.send_message(MSPCodes.MSP2_INAV_SET_FIGURE_SEQUENCE, buffer, false, next);
+        }
+
+        if (!FC.FIGURE_SEQUENCE || FC.FIGURE_SEQUENCE.length === 0) {
+            onCompleteCallback();
+        } else {
+            sendSegment();
+        }
     };
 
     self.loadMotorMixRules = function (callback) {
