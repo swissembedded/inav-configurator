@@ -5838,6 +5838,45 @@
     "oholdKnifeRightPitchTrimHelp": {
         "message": "Pitch trim on the KNIFE EDGE RIGHT hold target, positive = nose above the horizon, held via the rudder. Trim each side in flight; see the left trim for why the sides differ."
     },
+    "figureSequencerConfiguration": {
+        "message": "Figure Sequencer"
+    },
+    "figRollRate": {
+        "message": "Roll figure rate"
+    },
+    "figRollRateHelp": {
+        "message": "Roll rate flown by the FIGURE ROLL and FIGURE 4PT ROLL modes."
+    },
+    "figLoopRate": {
+        "message": "Loop figure rate"
+    },
+    "figLoopRateHelp": {
+        "message": "Pitch rate flown by the FIGURE LOOP mode."
+    },
+    "figPointDwell": {
+        "message": "Point roll dwell"
+    },
+    "figPointDwellHelp": {
+        "message": "Dwell time on each point of the FIGURE 4PT ROLL."
+    },
+    "figAssistZGain": {
+        "message": "Altitude assist gain"
+    },
+    "figAssistZGainHelp": {
+        "message": "Nose-up target offset per 10 m of altitude error during figures. The controller distributes the offset to elevator and rudder as the roll phase demands (slow-roll coordination)."
+    },
+    "figAssistVzGain": {
+        "message": "Altitude assist sink gain"
+    },
+    "figAssistVzGainHelp": {
+        "message": "Nose-up target offset per m/s of sink during figures. Keep low: the climb rate estimate lags and a strong damping term fights fast figures."
+    },
+    "figAssistMax": {
+        "message": "Altitude assist cap"
+    },
+    "figAssistMaxHelp": {
+        "message": "Maximum nose-up offset the altitude assist may add to a figure target."
+    },
     "blackboxFields": {
         "message": "Blackbox fields"
     },
