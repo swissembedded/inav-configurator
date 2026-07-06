@@ -5838,6 +5838,24 @@
     "oholdKnifeRightPitchTrimHelp": {
         "message": "Pitch trim on the KNIFE EDGE RIGHT hold target, positive = nose above the horizon, held via the rudder. Trim each side in flight; see the left trim for why the sides differ."
     },
+    "oholdHoverThrP": {
+        "message": "Hover throttle P gain"
+    },
+    "oholdHoverThrPHelp": {
+        "message": "Throttle response per meter of altitude error while PROP HANG is held (nose near vertical, thrust owns the altitude). The hover base throttle is learned online from the pilot's throttle at engage; the altitude target latches once the vertical motion has settled."
+    },
+    "oholdHoverThrI": {
+        "message": "Hover throttle I gain"
+    },
+    "oholdHoverThrIHelp": {
+        "message": "Throttle per meter per second of altitude error - trims the learned hover throttle."
+    },
+    "oholdHoverThrD": {
+        "message": "Hover throttle D gain"
+    },
+    "oholdHoverThrDHelp": {
+        "message": "Throttle per m/s of climb rate - damps the altitude loop. Move the throttle stick out of the mid deadband to take over manually."
+    },
     "figureSequencerConfiguration": {
         "message": "Figure Sequencer"
     },
