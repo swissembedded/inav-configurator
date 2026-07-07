@@ -334,7 +334,7 @@ mixerTab.initialize = function (callback, scrollPosition) {
     }
 
     function renderFigureSequence() {
-        const SEGMENT_TYPES = ['END', 'ROLL', 'PITCH', 'HOLD', 'WAIT ALT', 'WAIT TIME'];
+        const SEGMENT_TYPES = ['END', 'ROLL', 'PITCH', 'HOLD', 'WAIT ALT', 'WAIT TIME', 'IMPULSE', 'WAIT POS'];
         const $rows = $('#figure-sequence-rows');
         $rows.find('*').remove();
         if (!FC.FIGURE_SEQUENCE) {
