@@ -5875,7 +5875,49 @@
         "message": "Hover throttle D gain"
     },
     "oholdHoverThrDHelp": {
-        "message": "Throttle per m/s of climb rate - damps the altitude loop. Move the throttle stick out of the mid deadband to take over manually."
+        "message": "Throttle per m/s of climb rate - damps the altitude loop. The throttle stick outside the mid deadband commands a climb rate (full deflection 2 m/s); slamming it to the bottom cuts the throttle."
+    },
+    "oholdHoverThrMin": {
+        "message": "Hover throttle floor"
+    },
+    "oholdHoverThrMinHelp": {
+        "message": "The hover altitude controller never cuts the throttle below this, preserving the steering authority that scales with thrust (prop wash / thrust vectoring). Set slightly below the hover throttle; 1000 = no floor."
+    },
+    "oholdHoverGain": {
+        "message": "Hover learned gain"
+    },
+    "oholdHoverGainHelp": {
+        "message": "Learned damping reserve for the hover regime, maintained by the firmware: detected limit cycles back the attitude gain off, quiet hovering recovers it. Saved on disarm and used as the starting value for the next hang."
+    },
+    "oholdEntryRate": {
+        "message": "Hold entry rate"
+    },
+    "oholdEntryRateHelp": {
+        "message": "Rate at which the target attitude slews from the current attitude to the selected hold, and back to level on the exit handover."
+    },
+    "oholdStickAngle": {
+        "message": "Stick angle range"
+    },
+    "oholdStickAngleHelp": {
+        "message": "Roll/pitch stick deflection carves a held angle offset from the hold attitude (full deflection = this many degrees). 0 = sticks act as rate commands instead."
+    },
+    "oholdStickReturnRate": {
+        "message": "Stick return rate"
+    },
+    "oholdStickReturnRateHelp": {
+        "message": "How fast the target returns to the hold attitude after the sticks center."
+    },
+    "oholdAssistThrP": {
+        "message": "Knife/inverted throttle assist P"
+    },
+    "oholdAssistThrPHelp": {
+        "message": "Damping term of the knife edge / inverted throttle assist: throttle per m/s of climb rate."
+    },
+    "oholdAssistThrI": {
+        "message": "Knife/inverted throttle assist I"
+    },
+    "oholdAssistThrIHelp": {
+        "message": "Trim rate of the knife edge / inverted throttle assist: the throttle slowly trims around the pilot's stick until the hold stops sinking or climbing. 0 disables the assist."
     },
     "figureSequencerConfiguration": {
         "message": "Figure Sequencer"
