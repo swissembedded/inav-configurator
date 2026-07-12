@@ -5877,6 +5877,12 @@
     "oholdHoverThrDHelp": {
         "message": "Throttle per m/s of climb rate - damps the altitude loop. The throttle stick outside the mid deadband commands a climb rate (full deflection 2 m/s); slamming it to the bottom cuts the throttle."
     },
+    "oholdKnifeSpeedFF": {
+        "message": "Knife edge speed feedforward"
+    },
+    "oholdKnifeSpeedFFHelp": {
+        "message": "Extra nose-above-horizon angle per half throttle of speed deficit: the fuselage side force scales with speed squared, so flying slower needs more nose angle immediately. Fed forward from the throttle instead of waiting for an altitude error. 0 = off."
+    },
     "oholdHoverThrMin": {
         "message": "Hover throttle floor"
     },
