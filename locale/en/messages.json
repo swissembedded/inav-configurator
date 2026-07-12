@@ -5889,6 +5889,24 @@
     "oholdHoverGainHelp": {
         "message": "Learned damping reserve for the hover regime, maintained by the firmware: detected limit cycles back the attitude gain off, quiet hovering recovers it. Saved on disarm and used as the starting value for the next hang."
     },
+    "oholdInvertedGain": {
+        "message": "Inverted learned gain"
+    },
+    "oholdInvertedGainHelp": {
+        "message": "Learned damping reserve for the inverted hold, relative to the normal-flight gains (100 = reference). Firmware-maintained like the hover gain; saved on disarm."
+    },
+    "oholdKnifeGain": {
+        "message": "Knife edge learned gain"
+    },
+    "oholdKnifeGainHelp": {
+        "message": "Learned damping reserve for the knife edge holds, relative to the normal-flight gains (100 = reference). Firmware-maintained like the hover gain; saved on disarm."
+    },
+    "oholdFigureGain": {
+        "message": "Figure learned gain"
+    },
+    "oholdFigureGainHelp": {
+        "message": "Learned damping reserve while a figure flies, relative to the normal-flight gains (100 = reference). Firmware-maintained; flying the same figures repeatedly converges it - they get better with every flight."
+    },
     "oholdEntryRate": {
         "message": "Hold entry rate"
     },
