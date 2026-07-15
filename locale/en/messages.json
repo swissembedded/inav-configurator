@@ -10,11 +10,11 @@
         "message": "English",
         "_comment": "Don't translate!"
     },
-	  "language_bg": {
+    "language_bg": {
         "message": "Български",
         "_comment": "Don't translate!"
     },
-	  "language_uk": {
+    "language_uk": {
         "message": "українська",
         "_comment": "Don't translate!"
     },
@@ -5859,24 +5859,6 @@
     "oholdKnifeRightPitchTrimHelp": {
         "message": "Pitch trim on the KNIFE EDGE RIGHT hold target, positive = nose above the horizon, held via the rudder. Trim each side in flight; see the left trim for why the sides differ."
     },
-    "oholdHoverThrP": {
-        "message": "Hover throttle P gain"
-    },
-    "oholdHoverThrPHelp": {
-        "message": "Throttle response per meter of altitude error while PROP HANG is held (nose near vertical, thrust owns the altitude). The hover base throttle is learned online from the pilot's throttle at engage; the altitude target latches once the vertical motion has settled."
-    },
-    "oholdHoverThrI": {
-        "message": "Hover throttle I gain"
-    },
-    "oholdHoverThrIHelp": {
-        "message": "Throttle per meter per second of altitude error - trims the learned hover throttle."
-    },
-    "oholdHoverThrD": {
-        "message": "Hover throttle D gain"
-    },
-    "oholdHoverThrDHelp": {
-        "message": "Throttle per m/s of climb rate - damps the altitude loop. The throttle stick outside the mid deadband commands a climb rate (full deflection 2 m/s); slamming it to the bottom cuts the throttle."
-    },
     "oholdKnifeSpeedFF": {
         "message": "Knife edge speed feedforward"
     },
@@ -5930,18 +5912,6 @@
     },
     "oholdStickReturnRateHelp": {
         "message": "How fast the target returns to the hold attitude after the sticks center."
-    },
-    "oholdAssistThrP": {
-        "message": "Knife/inverted throttle assist P"
-    },
-    "oholdAssistThrPHelp": {
-        "message": "Damping term of the knife edge / inverted throttle assist: throttle per m/s of climb rate."
-    },
-    "oholdAssistThrI": {
-        "message": "Knife/inverted throttle assist I"
-    },
-    "oholdAssistThrIHelp": {
-        "message": "Trim rate of the knife edge / inverted throttle assist: the throttle slowly trims around the pilot's stick until the hold stops sinking or climbing. 0 disables the assist."
     },
     "figureSequencerConfiguration": {
         "message": "Figure Sequencer"

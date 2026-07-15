@@ -159,21 +159,9 @@
                             <label for="oholdKnifeRightPitchTrim"><span data-i18n="oholdKnifeRightPitchTrim"></span></label>
                             <div for="oholdKnifeRightPitchTrim" class="helpicon cf_tip" data-i18n_title="oholdKnifeRightPitchTrimHelp"></div>
                         </div>
-                        <div class="number">
-                            <input id="oholdHoverThrP" type="number" data-setting="ohold_hover_thr_p" data-setting-multiplier="1" step="1" min="0" max="100" />
-                            <label for="oholdHoverThrP"><span data-i18n="oholdHoverThrP"></span></label>
-                            <div for="oholdHoverThrP" class="helpicon cf_tip" data-i18n_title="oholdHoverThrPHelp"></div>
-                        </div>
-                        <div class="number">
-                            <input id="oholdHoverThrI" type="number" data-setting="ohold_hover_thr_i" data-setting-multiplier="1" step="1" min="0" max="100" />
-                            <label for="oholdHoverThrI"><span data-i18n="oholdHoverThrI"></span></label>
-                            <div for="oholdHoverThrI" class="helpicon cf_tip" data-i18n_title="oholdHoverThrIHelp"></div>
-                        </div>
-                        <div class="number">
-                            <input id="oholdHoverThrD" type="number" data-setting="ohold_hover_thr_d" data-setting-multiplier="1" step="1" min="0" max="100" />
-                            <label for="oholdHoverThrD"><span data-i18n="oholdHoverThrD"></span></label>
-                            <div for="oholdHoverThrD" class="helpicon cf_tip" data-i18n_title="oholdHoverThrDHelp"></div>
-                        </div>
+                        <!-- hover / knife / inverted throttle gains are DERIVED from
+                             the learned hover point in the firmware (derive-instead-
+                             of-ask rework) - no fields for them anymore -->
                         <div class="number">
                             <input id="oholdKnifeSpeedFF" type="number" data-unit="deg" data-setting="ohold_knife_speed_ff" data-setting-multiplier="1" step="1" min="0" max="30" />
                             <label for="oholdKnifeSpeedFF"><span data-i18n="oholdKnifeSpeedFF"></span></label>
@@ -218,16 +206,6 @@
                             <input id="oholdStickReturnRate" type="number" data-unit="degps" data-setting="ohold_stick_return_rate" data-setting-multiplier="1" step="5" min="5" max="180" />
                             <label for="oholdStickReturnRate"><span data-i18n="oholdStickReturnRate"></span></label>
                             <div for="oholdStickReturnRate" class="helpicon cf_tip" data-i18n_title="oholdStickReturnRateHelp"></div>
-                        </div>
-                        <div class="number">
-                            <input id="oholdAssistThrP" type="number" data-setting="ohold_assist_thr_p" data-setting-multiplier="1" step="1" min="0" max="255" />
-                            <label for="oholdAssistThrP"><span data-i18n="oholdAssistThrP"></span></label>
-                            <div for="oholdAssistThrP" class="helpicon cf_tip" data-i18n_title="oholdAssistThrPHelp"></div>
-                        </div>
-                        <div class="number">
-                            <input id="oholdAssistThrI" type="number" data-setting="ohold_assist_thr_i" data-setting-multiplier="1" step="1" min="0" max="255" />
-                            <label for="oholdAssistThrI"><span data-i18n="oholdAssistThrI"></span></label>
-                            <div for="oholdAssistThrI" class="helpicon cf_tip" data-i18n_title="oholdAssistThrIHelp"></div>
                         </div>
                     </div>
                 </div>
