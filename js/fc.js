@@ -644,7 +644,8 @@ var FC = {
             {bit: 0, group: 'other', name: 'THR_VBAT_COMP', haveTip: true, showNameInTip: true},
             {bit: 3, group: 'other', name: 'BAT_PROFILE_AUTOSWITCH', haveTip: true, showNameInTip: true},
             {bit: 31, group: 'other', name: "FW_AUTOTRIM", haveTip: true, showNameInTip: true},
-            {bit: 4, group: 'other', name: "GEOZONE", haveTip: true, showNameInTip: true}
+            {bit: 4, group: 'other', name: "GEOZONE", haveTip: true, showNameInTip: true},
+            {bit: 5, group: 'other', name: "FW_AEROBATICS", haveTip: true, showNameInTip: true}
         ];
 
         return features.reverse();

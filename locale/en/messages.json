@@ -930,6 +930,12 @@
     "featureFW_AUTOTRIMTip": {
         "message": "When flying in a stabilized mode, continuously adjust the servo midpoints so that the airplane keeps flying straight when switching to manual mode. Requires GPS."
     },
+    "featureFW_AEROBATICS": {
+        "message": "3D aerobatics suite for Fixed Wing (experimental)"
+    },
+    "featureFW_AEROBATICSTip": {
+        "message": "Enables the experimental fixed-wing aerobatics suite: orientation holds (inverted, knife edge, prop hang), scripted figures, the altitude safety floor, autogyro rotor guard and crash detection. Off by default - with the feature disabled the firmware behaves exactly as without the suite, and the aerobatics modes and tuning fields appear only while it is enabled."
+    },
     "featureDYNAMIC_FILTERS": {
         "message": "Dynamic Gyro Filters"
     },

@@ -65,6 +65,14 @@ advancedTuningTab.initialize = function (callback) {
             $('#geozoneSettings').hide();
         }
 
+        // the aerobatics tuning exists only while the experimental
+        // FW_AEROBATICS feature is enabled (same pattern as GEOZONE);
+        // without it the tab looks exactly like upstream
+        if (!FC.isFeatureEnabled('FW_AEROBATICS')) {
+            $('#oholdSettings').hide();
+            $('#figureSequencerSettings').hide();
+        }
+
         GUI.simpleBind();
 
         i18n.localize();

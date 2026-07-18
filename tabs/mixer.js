@@ -628,6 +628,13 @@ mixerTab.initialize = function (callback, scrollPosition) {
         $motorMixTable = $('#motor-mix-table');
         $motorMixTableBody = $motorMixTable.find('tbody');
 
+        // thrust-vectoring tuning belongs to the experimental
+        // FW_AEROBATICS feature (GEOZONE pattern): hidden without it,
+        // the tab looks exactly like upstream
+        if (!FC.isFeatureEnabled('FW_AEROBATICS')) {
+            $('#tvcSettings').hide();
+        }
+
         function fillMixerPreset() {
             let mixers = mixer.getByPlatform(FC.MIXER_CONFIG.platformType);
 
