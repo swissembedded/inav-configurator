@@ -934,7 +934,13 @@
         "message": "3D aerobatics suite for Fixed Wing (experimental)"
     },
     "featureFW_AEROBATICSTip": {
-        "message": "Enables the experimental fixed-wing aerobatics suite: orientation holds (inverted, knife edge, prop hang), scripted figures, the altitude safety floor, autogyro rotor guard and crash detection. Off by default - with the feature disabled the firmware behaves exactly as without the suite, and the aerobatics modes and tuning fields appear only while it is enabled."
+        "message": "Enables the experimental fixed-wing aerobatics suite: orientation holds (inverted, knife edge, prop hang), scripted figures, the altitude safety floor and autogyro rotor guard. Off by default - with the feature disabled the firmware behaves exactly as without the suite, and the aerobatics modes and tuning fields appear only while it is enabled."
+    },
+    "featureCRASH_DETECTION": {
+        "message": "Crash detection (cut motor, stay armed)"
+    },
+    "featureCRASH_DETECTIONTip": {
+        "message": "Cut the motor after a crash while staying armed: a sharp acceleration spike near the accelerometer's full-scale, followed by the aircraft lying still. Move the throttle to zero and up again to re-allow the motor - short bursts help locate the aircraft in high grass or corn. Works on fixed wing and multirotor, and arms only once clearly in flight (a hand launch, or throttle held above cruise for a moment), so an armed aircraft can be carried. The impact threshold is derived from the accelerometer, not tuned per aircraft. Off by default."
     },
     "featureDYNAMIC_FILTERS": {
         "message": "Dynamic Gyro Filters"
